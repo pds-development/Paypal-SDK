@@ -1,6 +1,6 @@
 {
-    "name": "patricschonenberger/paypal",
-    "type": "project",
+    "name": "pds-development/paypal-sdk",
+    "version": "0.0.1",
     "autoload": {
         "psr-4": {
             "Paypal\\": "src/"
@@ -9,8 +9,10 @@
     "authors": [
         {
             "name": "Patric Schönenberger",
-            "email": "p.schoenenberger@spedition.de"
+            "email": "patric@pds-dev.de"
         }
     ],
-    "require": {}
+    "require": {
+        "php": ">= 7.4"
+    }
 }
