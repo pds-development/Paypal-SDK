@@ -12,5 +12,7 @@
             "email": "patric@pds-dev.de"
         }
     ],
-    "require": {}
+    "require": {
+        "php": ">= 7.4"
+    }
 }
