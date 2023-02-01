@@ -1,5 +1,5 @@
 {
-    "name": "pds-dev/paypal-sdk",
+    "name": "pds-development/paypal-sdk",
     "version": "0.0.1",
     "autoload": {
         "psr-4": {
