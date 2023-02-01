@@ -1,0 +1,16 @@
+{
+    "name": "patricschonenberger/paypal",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Paypal\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Patric Schönenberger",
+            "email": "p.schoenenberger@spedition.de"
+        }
+    ],
+    "require": {}
+}
