@@ -1,6 +1,7 @@
 {
     "name": "pds-development/paypal-sdk",
     "version": "0.0.1",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Paypal\\": "src/"
