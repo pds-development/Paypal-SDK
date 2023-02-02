@@ -4,5 +4,5 @@ namespace Paypal;
 
 class TransactionSearch
 {
-
+    use Authorization;
 }
