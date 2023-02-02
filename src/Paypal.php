@@ -18,63 +18,79 @@ use Paypal\PaypalCredentials;
 
 class Paypal
 {
-    public function __construct(PaypalCredentials $credentials, $currentMode = true){
-        $this->CatalogProducts = new CatalogProducts($credentials, $currentMode);
-        $this->Disputes = new Disputes($credentials, $currentMode);
-        $this->Identify = new Identify($credentials, $currentMode);
-        $this->Invoice = new Invoice($credentials, $currentMode);
-        $this->Order = new Order($credentials, $currentMode);
-        $this->PartnerReferral = new PartnerReferral($credentials, $currentMode);
-        $this->PaymentExperience = new PaymentExperience($credentials, $currentMode);
-        $this->Payment = new Payment($credentials, $currentMode);
-        $this->ReferencedPayout = new ReferencedPayout($credentials, $currentMode);
-        $this->Subscription = new Subscription($credentials, $currentMode);
-        $this->Tracking = new Tracking($credentials, $currentMode);
-        $this->TransactionSearch = new TransactionSearch($credentials, $currentMode);
+    /**
+     * @var \Paypal\CatalogProducts CatalogProducts
+     */
+    var $CatalogProducts;
+    /**
+     * @var \Paypal\Disputes Disputes
+     */
+    var $Disputes;
+    /**
+     * @var \Paypal\Identify Identify
+     */
+    var $Identify;
+    /**
+     * @var \Paypal\Invoice Invoice
+     */
+    var $Invoice;
+    /**
+     * @var \Paypal\Order Order
+     */
+    var $Order;
+    /**
+     * @var \Paypal\PartnerReferral PartnerReferral
+     */
+    var $PartnerReferral;
+    /**
+     * @var \Paypal\PaymentExperience PaymentExperience
+     */
+    var $PaymentExperience;
+    /**
+     * @var \Paypal\Payment Payment
+     */
+    var $Payment;
+    /**
+     * @var \Paypal\ReferencedPayout ReferencedPayout
+     */
+    var $ReferencedPayout;
+    /**
+     * @var \Paypal\Subscription Subscription
+     */
+    var $Subscription;
+    /**
+     * @var \Paypal\Tracking Tracking
+     */
+    var $Tracking;
+    /**
+     * @var \Paypal\TransactionSearch TransactionSearch
+     */
+    var $TransactionSearch;
+
+
+    public function __construct(PaypalCredentials $credentials, $sandbox = true){
+        $this->setMode($sandbox);
+        $this->CatalogProducts = new CatalogProducts($credentials, $sandbox);
+        $this->Disputes = new Disputes($credentials, $sandbox);
+        $this->Identify = new Identify($credentials, $sandbox);
+        $this->Invoice = new Invoice($credentials, $sandbox);
+        $this->Order = new Order($credentials, $sandbox);
+        $this->PartnerReferral = new PartnerReferral($credentials, $sandbox);
+        $this->PaymentExperience = new PaymentExperience($credentials, $sandbox);
+        $this->Payment = new Payment($credentials, $sandbox);
+        $this->ReferencedPayout = new ReferencedPayout($credentials, $sandbox);
+        $this->Subscription = new Subscription($credentials, $sandbox);
+        $this->Tracking = new Tracking($credentials, $sandbox);
+        $this->TransactionSearch = new TransactionSearch($credentials, $sandbox);
     }
 
     /**
      * @param $sandbox boolean
      * @return void
+     *
+     * Set Mode of PayPal connection
      */
     public function setMode($sandbox = 1){
         $this->sandbox = $sandbox;
-    }
-
-    public function CatalogProducts() {
-        return $this->CatalogProducts;
-    }
-    public function Disputes() {
-        return $this->Disputes;
-    }
-    public function Identify() {
-        return $this->Identify;
-    }
-    public function Invoice() {
-        return $this->Invoice;
-    }
-    public function Order() {
-        return $this->Order;
-    }
-    public function PartnerReferral() {
-        return $this->PartnerReferral;
-    }
-    public function PaymentExperience() {
-        return $this->PaymentExperience;
-    }
-    public function Payment() {
-        return $this->Payment;
-    }
-    public function ReferencedPayout() {
-        return $this->ReferencedPayout;
-    }
-    public function Subscription() {
-        return $this->Subscription;
-    }
-    public function Tracking() {
-        return $this->Tracking;
-    }
-    public function TransactionSearch() {
-        return $this->TransactionSearch;
     }
 }
